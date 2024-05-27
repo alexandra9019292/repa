@@ -1,12 +1,12 @@
 from django.db import models
 
 # Create your models here.
-class Book(models.Model):
-    name = models.CharField(max_length=100)
-    date = models.DateField()
-    img = models.ImageField()
+# class Book(models.Model):
+#     name = models.CharField(max_length=100)
+#     date = models.DateField()
+#     img = models.ImageField()
 
-    avtors = models.ForeignKey('Avtor', on_delete=models.CASCADE)
+    # avtors = models.ForeignKey('Avtor', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
