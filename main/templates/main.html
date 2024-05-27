@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="main" style="display:flex;gap:30px;">
+{% for avtor in avtors %}
+    <div class="card_img" style= "display:flex; height:200px; width:300px;background:yellow;padding:20px ">
+        <img src="{{ avtor.img.url }}" alt="nn" style="height:100px; width:100px;">
+         <h2 style="padding:20px ">
+             {{avtor.name}}
+         </h2>
+    </div>
+{% endfor %}
+
+
+    <div class="main" style="display:flex;gap:30px;" >
+        {% for buk in books %}
+
+    <a href="{% url 'book' %}" style= "display:flex; height:200px; width:300px;background:grey;padding:20px ">
+        <div >
+            <img src="{{buk.img.url}} " style="height:200px; width:200px;">
+        </div>
+        <h2 style="padding: 10px">{{buk.name}}</h2>
+    </a>
+        
+    {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
